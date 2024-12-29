@@ -5,14 +5,12 @@ import "./video.css"
 import moment from "moment";
 const Youtube = () => {
 
-  const API_KAY = import.meta.env.VITE_API_KEY;
+  // const API_KAY = import.meta.env.VITE_API_KEY;
   const [apiData, setApiData] = useState([])
 
   useEffect(()=>{
      fetch(
-       `https://www.googleapis.com/youtube/v3/search?key=${
-        API_KAY
-       }&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=9`
+       `https://www.googleapis.com/youtube/v3/search?key=AIzaSyBfg-aqV0pHfg7ee-fvDUc0YIDP-8j_abU&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=9`
      )
        .then((response) => response.json())
        .then((data) => {
